@@ -16,11 +16,28 @@ const getLecturers = async (cb) => {
     }
 }
 
-const addLecturer = async () => {}
+const addLecturer = async (lecturer) => {
+    try {
+        let result = await axios({
+            method: "POST",
+            url: URL + "/create",
+            data: lecturer
+        })
+        console.log(result.data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 const editLecturer = async () => {}
 
-const removeLecturer = async () => {}
+const removeLecturer = async (id) => {
+    let result = await axios({
+        method: "DELETE",
+        url: URL + "/delete/" + id
+    })
+    console.log(result)
+}
 
 const accountLecturer = async () => {}
 

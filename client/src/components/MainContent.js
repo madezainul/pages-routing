@@ -15,7 +15,7 @@ const MainContent = () => {
         {/* <h3>Dashboard Class Room</h3> */}
 
         <Routes>
-            <Route path="/" element={
+            <Route path="" element={
                 <HomePage></HomePage>
             }></Route>
             <Route path="lecturers" element={<Lecturer></Lecturer>}>
