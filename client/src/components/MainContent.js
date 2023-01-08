@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import {
     HomePage,
-    Lecturer, ListLecturers, CreateLecturer,
+    Lecturer, ListLecturers, CreateLecturer, EditLecturer,
     Student
 } from '../pages'
 
@@ -21,6 +21,9 @@ const MainContent = () => {
             <Route path="lecturers" element={<Lecturer></Lecturer>}>
                 <Route path="" element={<ListLecturers></ListLecturers>}></Route>
                 <Route path="create" element={<CreateLecturer></CreateLecturer>}></Route>
+                <Route path="edit">
+                    <Route path=":id" element={<EditLecturer></EditLecturer>}></Route>
+                </Route>
             </Route>
             <Route path="/students" element={
                 <Student></Student>
